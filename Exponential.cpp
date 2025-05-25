@@ -99,7 +99,7 @@ double Exponential::GetValue(double in){
 ///@brief sets the value of the b_coeff
 void Exponential::SetBase(double b){
 
-	if (b <= 0.) {
+	while (b <= 0.) {
 		WarningMessage("-- SetBase: b_coeff should not be <= 0. Value not changed.");
 		return;
 	}
@@ -181,7 +181,7 @@ void Exponential::Dump(){
 
 	if (b_coeff <= 0.){
 		WarningMessage("The Exponential is not valid");
-		return;
+		exit(-1);
 	}
 
 	b = GetBase();
@@ -199,8 +199,7 @@ void Exponential::Dump(){
 void Exponential::Dump2(){
 
 	cout << endl;
-	cout << "---Dump Exponential--- " << endl;
-	cout << endl;
-	cout << " " << k_coeff << "*" << b_coeff << "^" << "(x* " << c_coeff << ")" << endl;
-	cout << endl;
+	cout << "--Exponential--";
+	cout << " " << k_coeff << "*" << b_coeff << "^" << "( " << c_coeff << " * x)" << endl;
+
 }

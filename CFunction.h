@@ -33,6 +33,7 @@ public:
 	/// @name DEBUG 
 	/// @{
 	virtual void Dump()=0;
+	virtual void Dump2()=0;
 	/// @}
 
     

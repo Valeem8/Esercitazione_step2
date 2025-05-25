@@ -14,7 +14,6 @@
 #include "Power.h"
 #include "menu.h"
 
-#define SIZE 10
 
 using namespace std;
 
@@ -25,7 +24,7 @@ int main(){
 	
 	while(choice != 0){
 	
-	choice = DisplayMenu();
+		choice = DisplayMenu();
 		switch (choice){
 
 		case 0:
@@ -33,27 +32,29 @@ int main(){
 			break;
 			
 		case 1:
-			DisplayFunc(*funct);
+			DisplayFunc(funct);
 			break;
 			
 		case 2:
-			InsertFunc();
+			InsertFunc(funct);
 			break;
 		
 		case 3:
-			DeleteFunc();
+			DeleteFunc(funct);
 			break;
 		
 		case 4:
-			DeleteAll();
+			DeleteAll(funct);
 			break;
 		
 		case 5:
-			SelectFunc(double x);
+			SelectFunc(funct);
 			break;
 	
 		default:
-			cout <<"Not allowed choice. Try again!"<< endl;
+			cout << endl;
+			cout <<"Scelta non possibile. Riprovare."<< endl;
+			cout << endl;
 			break;
 		}
 	}

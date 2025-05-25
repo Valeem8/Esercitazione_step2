@@ -10,32 +10,28 @@
 
 #include <iostream>
 #include <cstring>
+#include <vector>
 #include "CFunction.h"
 #include "Polynomial.h"
 #include "Exponential.h"
 #include "Power.h"
 
-	void main();
-	
-///@brief print the different options
+	/// @name DISPLAY
+	/// @{
 	int DisplayMenu();
-	
-///@brief exit the menu
+	void DisplayFunc(vector<Function*> &funct);
+	/// @}
+
 	void ExitMenu();
-	
-///@brief print all the functions
-	void DisplayFunc();
 
-///@brief allow to add a function
-	void InsertFunc();
+	/// @name OPERATORS
+	/// @{
+	vector<Function*> InsertFunc(vector<Function*> &funct);
+	vector<Function*> DeleteFunc(vector<Function*> &funct);
+	vector<Function*> DeleteAll(vector<Function*> &funct);
+	void SelectFunc(vector<Function*> &funct);
+	/// @}
 
-///@brief delete a function added
-	void DeleteFunc();
-	
-///@brief delete all the functions added
-	void DeleteAll();
-
-///@brief Select a function among the added ones and obtain its value for a specific value of x
-	double SelectFunc(double x);
+	bool request(Function *ptr);
 
 #endif

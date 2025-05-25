@@ -232,9 +232,34 @@ void Polynomial::Dump(){
 	cout << endl;
 }
 
-/// @brief print the function 
+/// @brief Stampa la funzione
 void Polynomial::Dump2(){
 
-	Dump();
+	int i;
+	
+	if (degree == -1) {
+		cout << "Uninitialized polynomial" << endl;
+		return;
+	}
 
+	if (coeff == NULL) {
+		cout << "Degree: " << degree << endl;
+		cout << "No coefficients available" << endl;
+		return;
+	}
+
+	cout << endl;
+	cout << "--Polynomial--";
+	for(i=0; i<= degree; i++){
+		if(coeff[i] != 0.){
+			cout << (coeff[i] > 0 && i>0 ? " + " : " ") << coeff[i];
+			if(i>0){
+				cout << "x";
+				if(i>1)
+					cout << "^" << i;
+			}
+		}
+
+	}
+	cout << endl;
 }

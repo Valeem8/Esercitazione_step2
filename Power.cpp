@@ -149,9 +149,7 @@ void Power::Dump(){
 void Power::Dump2(){
 
 	cout << endl;
-	cout << "---Dump Power--- " << endl;
-	cout << endl;
+	cout << "--Power-- ";
 	cout << " " << k_coeff << "*x^(" << e_coeff << ")" << endl;
-	cout << endl;
 
 }
